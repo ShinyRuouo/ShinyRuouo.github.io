@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     摸鱼
+    面向对象编程、计算理论与编程范式的关系 |  摸鱼
   </title>
   
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -30,51 +30,17 @@
 <body>
   <div id="app">
     <main class="content">
-      
-<section class="cover">
-    
-      
-      <a class="forkMe" href="https://github.com/ShinyRuouo"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover6.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">摸鱼</a></h1>
-      <h2>Blogs about my graduate life</h2>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="#main" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-<div id="main">
-  <section class="outer">
-  <article class="articles">
-    
-    <h1 class="page-type-title"></h1>
-
-    
-    
-    <article id="post-面向对象编程、计算理论与编程范式的关系" class="article article-type-post" itemscope
+      <section class="outer">
+  <article id="post-面向对象编程、计算理论与编程范式的关系" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2019/12/27/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E3%80%81%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F%E7%9A%84%E5%85%B3%E7%B3%BB/"
-    >面向对象编程、计算理论与编程范式的关系</a
-  >
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  面向对象编程、计算理论与编程范式的关系
+</h1>
   
 
     </header>
@@ -90,6 +56,14 @@
     
 
     
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
 
     <div class="article-entry" itemprop="articleBody">
       
@@ -101,9 +75,25 @@
       <h1 id="面向对象编程、计算理论与编程范式的关系"><a href="#面向对象编程、计算理论与编程范式的关系" class="headerlink" title="面向对象编程、计算理论与编程范式的关系"></a>面向对象编程、计算理论与编程范式的关系</h1><p>看了Java编程思想的第一章，突然意识到计算理论模型与编程语言存在着关系，这些是我之前没有想到的。这几年来，陆续学了C、C++、PHP、Java、python，始终不明白为何有这么多语言存在，不同的编程语言的设计思路是什么。现在在学习了计算理论基础课程之后，对计算的本质有了初步理解，同时也意识到计算与编程范式间的联系。</p>
 <p>第一门学习的语言是C，接触最多的是Java，都属于命令式编程。日复一日地学习命令式编程也许限制了思维。先立一个flag，学习一门函数式编程语言，看国外的functional programming公开课。</p>
 <p>PS：我真是菜的真实，计算理论复习到头秃都每看懂</p>
-      
-      <a class="article-more-link" href="/2019/12/27/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E3%80%81%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E4%B8%8E%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F%E7%9A%84%E5%85%B3%E7%B3%BB/">阅读更多...</a>
-      
+<a id="more"></a>
+
+<h2 id="命令式编程"><a href="#命令式编程" class="headerlink" title="命令式编程"></a>命令式编程</h2><p>C、BASIC、FORTRAN是对汇编语言的抽象，汇编是对底层机器的抽象。所以这些所作的抽象要求在解决问题时基于计算机的结构，而不是基于实际问题的结构。图灵机是一种计算模型，冯诺依曼是图灵机的实现。图灵机指导产生了命令式编程。</p>
+<h2 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h2><p>LISP，只针对解问题建模，是面向数学的抽象，将计算描述为一种表达式求值。基于λ演算（计算理论相关）。函数式编程被认为是更符合人的思维的，即告诉机器做什么，而不是告诉机器该怎么做。不同计算模型影响不同类型的编程语言，lambda演算是函数式语言的计算模型。</p>
+<h2 id="计算模型与编程范式的关系"><a href="#计算模型与编程范式的关系" class="headerlink" title="计算模型与编程范式的关系"></a>计算模型与编程范式的关系</h2><p>命令式编程和函数式编程都代表了计算机的数学本质，只是计算模型的不同。命令式语言的出发点都是冯诺依曼体系结构，对机器指令的抽象，但是其命令式的特征最根本的来源其实还是图灵机，因为现行计算机的硬件结构（冯诺依曼体系结构）就是图灵机的直观实现，就连冯诺依曼本人也曾说过（当然有可能是谦虚的说法）：存储程序思想不是自己最先提出来的，除掉巴贝奇等人的工作，这个思想基本上可以说是属于图灵的。因此无论冯诺依曼体系结构也好，图灵机也好其实都是命令式，基于状态转换的，从这点上看计算机的机器本质和数学本质其实是统一的。</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>抽象：人们所能够解决的问题的复杂性直接取决于抽象的类型和质量。类比机器学习的表示，更加强大的representation embedding。</p>
+<p>面向对象编程：属于命令式编程，允许根据问题描述问题，而不是根据运行解决方案的计算机来描述问题。每个对象看起来都像一个微型计算机，都有状态和操作。</p>
+<p>面向对象语言的特性：</p>
+<ol>
+<li>万物皆为对象。</li>
+<li>程序是对象的集合，通过发送消息来告诉对方想要的。</li>
+<li>每个对象都有自己的由其他对象所构成的存储。</li>
+<li>每个对象都拥有其类型(type)。每个对象都是某个类(class)的一个实例(instance)。</li>
+<li>某一特定类型的所有对象都可以接收相同的消息。</li>
+</ol>
+<p>class描述了相同特性和行为的对象集合，所以一个class实际上就是一个数据类型。</p>
+<p>interface确定了对某一特定对象所能发出的请求。</p>
+<p>JAVA的特点：拥有确定的接口；每个对象都提供服务；对象及代码复用；继承(Java单继承，最顶层的基类为Object)，单继承使得对象容易在堆上创建，垃圾回收机制容易实现；多态(动态绑定)；对象的创建和生命周期；异常处理；并发编程；</p>
+
       
       <!-- 打赏 -->
       
@@ -119,81 +109,28 @@
   </div>
 
   
+  
+  <nav class="article-nav">
+    
+    
+      <a href="/2019/12/26/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%88%9D%E4%BD%93%E9%AA%8C/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">研究生初体验</div>
+      </a>
+    
+  </nav>
+
 
   
 
+  
+
+  
+  
   
 
 </article>
-    
-    <article id="post-研究生初体验" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2019/12/26/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%88%9D%E4%BD%93%E9%AA%8C/"
-    >研究生初体验</a
-  >
-</h2>
-  
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2019/12/26/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%88%9D%E4%BD%93%E9%AA%8C/" class="article-date">
-  <time datetime="2019-12-26T15:14:25.575Z" itemprop="datePublished">2019-12-26</time>
-</a>
-      
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-
-
-      
-
-      
-      <h1 id="研究生初体验"><a href="#研究生初体验" class="headerlink" title="研究生初体验"></a>研究生初体验</h1>
-      
-      <a class="article-more-link" href="/2019/12/26/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%88%9D%E4%BD%93%E9%AA%8C/">阅读更多...</a>
-      
-      
-      <!-- 打赏 -->
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://shinyruouo.github.io/2019/12/26/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%88%9D%E4%BD%93%E9%AA%8C/" data-id="ck4o9ysoc0002xguu1s979q2d"
-        class="article-share-link">分享</a>
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8%E5%90%90%E6%A7%BD/" rel="tag">日常吐槽</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" rel="tag">研究生</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-
-</article>
-    
-  </article>
-  
-
-  
 </section>
-</div>
-
       <footer class="footer">
   <div class="outer">
     <ul class="list-inline">
@@ -236,8 +173,8 @@
       </div>
     </main>
     
-      <aside class="sidebar">
-        
+    <aside class="sidebar">
+      
         <button class="navbar-toggle"></button>
 <nav class="navbar">
   
@@ -323,6 +260,23 @@
 
 
 
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
 
 
 <script>
