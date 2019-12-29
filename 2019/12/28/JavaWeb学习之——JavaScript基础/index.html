@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    JavaWeb学习之——JavaScript基础 |  摸鱼
+  </title>
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+<script src="/js/pace.min.js"></script>
+
+
+  
+
+  
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-JavaWeb学习之——JavaScript基础" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JavaWeb学习之——JavaScript基础
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/12/28/JavaWeb%E5%AD%A6%E4%B9%A0%E4%B9%8B%E2%80%94%E2%80%94JavaScript%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2019-12-28T14:53:51.850Z" itemprop="datePublished">2019-12-28</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h1 id="JavaWeb学习之——JavaScript基础"><a href="#JavaWeb学习之——JavaScript基础" class="headerlink" title="JavaWeb学习之——JavaScript基础"></a>JavaWeb学习之——JavaScript基础</h1><p>JavaScript/HTML DOM/jQuery 浅尝辄止，全是抄的。</p>
+<p>手贱按了下关机，没自动保存，要自闭了。</p>
+<p>今天下了一天的雨，也在宿舍呆了一天。现在是晚上8点，大概从下午1点开始学到现在，学习效率和平时白天在实验室晚上在宿舍学习相比低太多了。果然学习时间不能拖太久，从7点学到11点半感觉是最合适的。</p>
+<a id="more"></a>
+
+<h2 id="JavaScript-hello-world"><a href="#JavaScript-hello-world" class="headerlink" title="JavaScript-hello world"></a>JavaScript-hello world</h2><p>JavaScript是运行在浏览器端的脚本语言</p>
+<p>需要在script标签里编写JavaScript代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//js代码,点击按钮弹出hello world窗口</span></span><br><span class="line"><span class="comment">//window.onload表示在窗口加载完成后执行以下方法</span></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementByID(<span class="string">"btnId"</span>);</span><br><span class="line">	btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">"hello world"</span>!);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-数据类型"><a href="#JavaScript-数据类型" class="headerlink" title="JavaScript 数据类型"></a>JavaScript 数据类型</h2><p>原始数据类型：number、String、boolean、null、undefined</p>
+<p>对象：object，除了原始数据类型外，万物皆对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">12</span>;</span><br><span class="line"><span class="keyword">typeof</span>(num1); <span class="comment">//判断数据类型</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-函数定义"><a href="#JavaScript-函数定义" class="headerlink" title="JavaScript 函数定义"></a>JavaScript 函数定义</h2><p>function 函数名(参数列表){函数体}</p>
+<p>function 可以在任何地方声明，优先加载。function也是个object。</p>
+<p>function的唯一标识为方法名，在Java中为方法名+参数列表，在JS中没有方法重载，调用方法时可选传参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum1</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">    alert(a+b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//将方法复值给变量，方法名就是变量名</span></span><br><span class="line"><span class="keyword">var</span> sum2 = <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">    alert(a,b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//弹出结果弹窗</span></span><br><span class="line">sum1(<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">sum2(<span class="number">1</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-对象创建"><a href="#JavaScript-对象创建" class="headerlink" title="JavaScript 对象创建"></a>JavaScript 对象创建</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种方式——new</span></span><br><span class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二章方式——&#123;属性:值  &#125;</span></span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//动态添加属性</span></span><br><span class="line">obj2.name = <span class="string">"火焰鼠"</span>;</span><br><span class="line">obj2.obj = obj1;</span><br><span class="line">obj2.func = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">"hello world"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-事件"><a href="#JavaScript-事件" class="headerlink" title="JavaScript 事件"></a>JavaScript 事件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//事件、文档或浏览器窗口发生的一些特定的交互瞬间,实现JavaScript与HTML之间的交互</span><br><span class="line">//HTML DOM EVENT 类</span><br><span class="line">// 1.在标签的事件属性中编写js代码</span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn1"</span> <span class="attr">onclick</span>=<span class="string">"alert('hello world')"</span>&gt;</span></span><br><span class="line">    按钮</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">// 2.动态绑定事件</span><br><span class="line">// -- 找到元素</span><br><span class="line">// -- 为元素相应的事件属性赋值一个方法</span><br><span class="line">// -- 当事件发生时，浏览器自动调用</span><br><span class="line">var button = documen  t.getElementById("btn2");</span><br><span class="line">button.onclick = function()&#123;</span><br><span class="line">    alert("hello world");</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript的加载方式"><a href="#JavaScript的加载方式" class="headerlink" title="JavaScript的加载方式"></a>JavaScript的加载方式</h2><p>JavaScript在页面中主要有如下几种方式嵌入：</p>
+<ol>
+<li><p>将JS代码写到网页头的<script>标签中</p>
+</li>
+<li><p>将JS代码写成外部文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"test.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将JS代码写在event中</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn1"</span> <span class="attr">onclick</span>=<span class="string">"alert('hello world')"</span>&gt;</span></span><br><span class="line">    不推荐，结构与行为耦合</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将JS代码写在网页结束位置</p>
+</li>
+</ol>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><p>DOM=document object model：文档对象模型</p>
+<p>HTML DOM 定义了所有 HTML 元素的<strong>对象</strong>和<strong>属性</strong>，以及访问它们的<em>方法</em>。</p>
+<p><strong>换言之，HTML DOM 是关于如何获取、修改、添加或删除 HTML 元素的标准。</strong></p>
+<p>可以把DOM认为是页面上数据和结构的一个树形结构。</p>
+<p><img src="https://www.w3school.com.cn/i/ct_htmltree.gif" alt="HTML DOM Node Tree"></p>
+<p>（一）常用的HTML DOM方法：</p>
+<ul>
+<li>getElementById() 获取带有指定Id的节点（元素）</li>
+<li>appendChild（node）插入新的子节点（元素）</li>
+<li>removeChild（node）删除子节点（元素）</li>
+</ul>
+<p>（二）、常用的HTML DOM属性</p>
+<ul>
+<li>innerHTML 节点（元素）的文本值</li>
+<li>parentNodes 节点（元素）的父节点</li>
+<li>childNodes  节点（元素）的子节点</li>
+<li>attributes 节点（元素）的属性节点</li>
+</ul>
+<p>（三）、DOM方法（常用的）</p>
+<table>
+<thead>
+<tr>
+<th><strong>方法</strong></th>
+<th><strong>意义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getElementById()</td>
+<td>获取带有指定Id的元素</td>
+</tr>
+<tr>
+<td>getElementsByTagName()</td>
+<td>获取包含带有指定标签名称的所有元素的节点列表（集合/节点数组）</td>
+</tr>
+<tr>
+<td>getElementsByClassName()</td>
+<td>获取包含带有指定类名的所有元素的节点列表</td>
+</tr>
+<tr>
+<td>appendChild()</td>
+<td>插入新的子元素（元素）</td>
+</tr>
+<tr>
+<td>removeChild()</td>
+<td>删除子节点（元素）</td>
+</tr>
+<tr>
+<td>replaceChild()</td>
+<td>替换子节点</td>
+</tr>
+<tr>
+<td>insertBefore()</td>
+<td>在指定的子节点前面插入新的子节点</td>
+</tr>
+<tr>
+<td>createAttribute()</td>
+<td>创建属性节点</td>
+</tr>
+<tr>
+<td>createElement()</td>
+<td>创建元素节点</td>
+</tr>
+<tr>
+<td>createTextNode()</td>
+<td>创建文本节点</td>
+</tr>
+<tr>
+<td>getAttribute()</td>
+<td>获取指定的属性值</td>
+</tr>
+<tr>
+<td>setAttribute()</td>
+<td>把指定的属性设置或修改为指定的值</td>
+</tr>
+</tbody></table>
+<h2 id="jquery"><a href="#jquery" class="headerlink" title="jquery"></a>jquery</h2><p>一个JavaScript库，可以简化程序员的工作。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.引入jQuery文件</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text\javascript"</span> <span class="attr">src</span>=<span class="string">"js\jquery-version.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">2.使用jQuery库编写脚本</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">	<span class="comment">// 核心函数：$ = jQuery = window.jQuery </span></span></span><br><span class="line"><span class="javascript">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// #btn: 表示以查询ID为btn的元素</span></span></span><br><span class="line"><span class="javascript">        $(<span class="string">"#btn"</span>).onclick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="actionscript">           alert(<span class="string">"hello world!"</span>); </span></span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="jQuery核心函数"><a href="#jQuery核心函数" class="headerlink" title="jQuery核心函数$"></a>jQuery核心函数$</h2><p><strong>一、传入参数</strong></p>
+<p>1、传入参数为[函数]时: <strong>$(function(){ })</strong></p>
+<p><strong>文档加载完成后</strong>执行此方法</p>
+<p>2、传入参数为[HTML字符串]时: <strong>$("<div>html</div>")</strong></p>
+<p>根据字符串创建元素节点对象</p>
+<p>3、传入参数为[选择器字符串]时: <strong>$("#id"）</strong></p>
+<p>根据选择器查找出元素节点对象</p>
+<p>4、传入参数为[ DOM对象]时: <strong>$(this)</strong></p>
+<p>将dom对象包装为jquery对象返回</p>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://shinyruouo.github.io/2019/12/28/JavaWeb%E5%AD%A6%E4%B9%A0%E4%B9%8B%E2%80%94%E2%80%94JavaScript%E5%9F%BA%E7%A1%80/" data-id="ck4qywaic00002cuuga5y2kv9"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java-web/" rel="tag">java web</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+    
+      <a href="/2019/12/28/JavaWeb%E5%AD%A6%E4%B9%A0%E4%B9%8B%E2%80%94%E2%80%94HTML&CSS%E5%9F%BA%E7%A1%80/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">JavaWeb学习之——HTML&amp;CSS基础</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2019
+        ShinyRuouo
+      </li>
+      <li>
+        
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a> by shenyu
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="摸鱼"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+
+<script src="/js/ayer.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+  </div>
+</body>
+
+</html>
